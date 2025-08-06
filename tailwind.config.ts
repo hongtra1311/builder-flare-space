@@ -14,6 +14,9 @@ export default {
     },
     extend: {
       colors: {
+        'mystic-purple': '#8B5CF6',
+        'mystic-red': '#EF4444',
+        'mystic-pink': '#EC4899',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
