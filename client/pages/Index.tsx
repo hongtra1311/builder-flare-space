@@ -110,7 +110,7 @@ const translations = {
     traits: "Đặc điểm:",
     howOthersSee: "Người Khác Nhìn Bạn Như Thế Nào:",
     revealsPerception: "Số này tiết lộ cách người khác nhìn nhận bạn và cách bạn thể hiện bản thân với thế giới.",
-    naturalTalents: "Tài năng tự nhiên và cách bạn thể hi���n bản thân với thế giới.",
+    naturalTalents: "Tài năng tự nhiên và cách bạn thể hiện bản thân với thế giới.",
     innerDesires: "Khao khát bên trong và điều thúc đẩy bạn ở cấp độ sâu sắc nhất.",
     outerPersonality: "Cách người khác nhìn nhận bạn và ấn tượng bạn tạo ra.",
     corePersonality: "Tóm Tắt Tính Cách Cốt Lõi",
@@ -192,7 +192,7 @@ const translations = {
     revealButton: "私の数字を明かす",
     calculating: "あなたの数字を計算中...",
     lifePathTitle: "ライフパス数",
-    birthdayTitle: "バースデ���数",
+    birthdayTitle: "バースデー数",
     attitudeTitle: "アティテュード数",
     expressionTitle: "エクスプレッション数",
     soulUrgeTitle: "ソウルアージ数",
@@ -416,9 +416,9 @@ export default function Index() {
           relationships: language === 'en' ? "Needs deep, meaningful connections with understanding partners" :
                         language === 'vi' ? "Cần những kết nối sâu sắc, ý nghĩa với đối tác hiểu biết" :
                         language === 'it' ? "Ha bisogno di connessioni profonde e significative con partner comprensivi" :
-                        "理解のあるパート��ーとの深く意味のあるつながりが必要",
+                        "理解のあるパートナーとの深く意味のあるつながりが必要",
           growth: language === 'en' ? "Balance solitude with meaningful social connections" :
-                 language === 'vi' ? "Cân bằng sự cô đơn với các kết nối xã hội có ý nghĩa" :
+                 language === 'vi' ? "Cân bằng sự cô đơn v��i các kết nối xã hội có ý nghĩa" :
                  language === 'it' ? "Bilanciare la solitudine con connessioni sociali significative" :
                  "孤独と意味のある社会的つながりのバランスを取る"
         }
@@ -877,7 +877,7 @@ export default function Index() {
         )}
 
         {/* Footer */}
-        <footer className="mt-16 pt-8 border-t border-purple-400/20">
+        <footer className="mt-8 pt-4 border-t border-purple-400/20">
           <div className="text-center">
             <p className="text-purple-300 text-sm">
               {t.footer}
