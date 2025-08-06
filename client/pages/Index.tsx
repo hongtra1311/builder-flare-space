@@ -89,7 +89,7 @@ const translations = {
     required: "*",
     fullName: "Họ Tên Đầy Đủ (Tùy chọn)",
     namePlaceholder: "Nhập họ tên đầy đủ để có bài đọc hoàn chỉnh",
-    revealButton: "Tiết Lộ Các Số C���a Tôi",
+    revealButton: "Tiết Lộ Các Số Của Tôi",
     calculating: "Đang Tính Toán Các Số Của Bạn...",
     lifePathTitle: "Số Đường Đời",
     birthdayTitle: "Số Ngày Sinh",
@@ -205,7 +205,7 @@ const translations = {
     relationships: "人間関係",
     growthPath: "成長の道",
     dayOfBirth: "誕生日",
-    reflectsTraits: "はあなたの自然な才能と性格的特徴を反映しています。",
+    reflectsTraits: "はあなたの自然な才能と性��的特徴を反映しています。",
     calculation: "計算:",
     traits: "特徴:",
     howOthersSee: "他の人があなたをどう見るか:",
@@ -218,7 +218,7 @@ const translations = {
     number: "数字",
     meaning: "意味",
     naturalTalentsAbilities: "自然な才能と能力",
-    howOthersPerceive: "他の人があなたをどう認���するか",
+    howOthersPerceive: "他の人があなたをどう認識するか",
     yourTalentsAbilities: "あなたの才能と能力",
     innerDesiresMotivations: "あなたの内なる願望と動機",
     outerPersonalityTraits: "あなたの外的な性格",
@@ -363,6 +363,372 @@ export default function Index() {
     }, 1500);
   };
 
+  const getBirthdayMeaning = (number: number) => {
+    const meanings: { [key: number]: any } = {
+      1: {
+        title: language === 'en' ? "The Leader" : language === 'vi' ? "Người Lãnh Đạo" : language === 'it' ? "Il Leader" : "リーダー",
+        components: language === 'en' ? "independence, leadership, confidence" :
+                   language === 'vi' ? "độc lập, lãnh đạo, tự tin" :
+                   language === 'it' ? "indipendenza, leadership, fiducia" :
+                   "独立、リーダーシップ、自信",
+        traits: language === 'en' ? [
+          "Natural-born leaders who are independent and pioneering",
+          "They thrive when they can take initiative and dislike being told what to do",
+          "Innovation and originality are their strengths",
+          "Need to carve their own path in life",
+          "May need to watch out for arrogance or impatience"
+        ] : language === 'vi' ? [
+          "Lãnh đạo bẩm sinh, độc lập và tiên phong",
+          "Họ phát triển khi có thể chủ động và không thích bị sai khiến",
+          "Đổi mới và sáng tạo là điểm mạnh của họ",
+          "Cần tự tạo con đường riêng trong cuộc sống",
+          "Có thể cần cẩn thận với sự kiêu ngạo hoặc thiếu kiên nhẫn"
+        ] : language === 'it' ? [
+          "Leader nati che sono indipendenti e pionieristici",
+          "Prosperano quando possono prendere l'iniziativa e non amano essere comandati",
+          "Innovazione e originalità sono i loro punti di forza",
+          "Hanno bisogno di tracciare il loro percorso nella vita",
+          "Potrebbero dover fare attenzione all'arroganza o all'impazienza"
+        ] : [
+          "独立心とパイオニア精神を持つ生まれながらのリーダー",
+          "主導権を握ることで成長し、指示されることを嫌う",
+          "革新性と独創性が彼らの強み",
+          "人生で自分だけの道を切り開く必要がある",
+          "傲慢さや短気に注意が必要"
+        ]
+      },
+      2: {
+        title: language === 'en' ? "The Diplomat" : language === 'vi' ? "Nhà Ngoại Giao" : language === 'it' ? "Il Diplomatico" : "外交官",
+        components: language === 'en' ? "sensitivity, harmony, cooperation" :
+                   language === 'vi' ? "nhạy cảm, hòa hợp, hợp tác" :
+                   language === 'it' ? "sensibilità, armonia, cooperazione" :
+                   "敏感さ、調和、協力",
+        traits: language === 'en' ? [
+          "Gentle, peace-loving individuals who value relationships",
+          "Sensitive to the needs of others and excel at creating harmony",
+          "Prefer partnership over going solo, diplomacy is their strength",
+          "Must be careful not to lose their identity while accommodating others",
+          "Emotional intelligence is a natural gift"
+        ] : language === 'vi' ? [
+          "Những người nhẹ nhàng, yêu hòa bình và coi trọng các mối quan hệ",
+          "Nhạy cảm với nhu cầu của người khác và xuất sắc trong việc tạo ra sự hòa hợp",
+          "Thích hợp tác hơn là đi một mình, ngoại giao là điểm mạnh",
+          "Phải cẩn thận không mất bản sắc khi chiều lòng người khác",
+          "Trí tuệ cảm xúc là món quà tự nhiên"
+        ] : language === 'it' ? [
+          "Individui gentili e amanti della pace che apprezzano le relazioni",
+          "Sensibili ai bisogni degli altri ed eccellono nel creare armonia",
+          "Preferiscono la partnership al lavoro da soli, la diplomazia è la loro forza",
+          "Devono stare attenti a non perdere la loro identità mentre si adattano agli altri",
+          "L'intelligenza emotiva è un dono naturale"
+        ] : [
+          "人間関係を大切にする穏やかで平和を愛する人々",
+          "他者のニーズに敏感で、調和を作り出すのが得意",
+          "単独行動よりもパートナーシップを好み、外交が得意",
+          "他者に合わせる中で自分のアイデンティティを失わないよう注意が必要",
+          "感情的知性は天賦の才能"
+        ]
+      },
+      3: {
+        title: language === 'en' ? "The Communicator" : language === 'vi' ? "Người Giao Tiếp" : language === 'it' ? "Il Comunicatore" : "コミュニケーター",
+        components: language === 'en' ? "creativity, joy, expression" :
+                   language === 'vi' ? "sáng tạo, vui vẻ, biểu hiện" :
+                   language === 'it' ? "creatività, gioia, espressione" :
+                   "創造性、喜び、表現",
+        traits: language === 'en' ? [
+          "Vibrant, expressive, and full of creative energy",
+          "Thrive in social settings and love to entertain or inspire",
+          "Express joy and creativity through words, art, or performance",
+          "Optimism and charm are their trademarks",
+          "May need to learn focus and avoid superficiality"
+        ] : language === 'vi' ? [
+          "Sống động, biểu cảm và đầy năng lượng sáng tạo",
+          "Phát triển trong môi trường xã hội và thích giải trí hoặc truyền cảm hứng",
+          "Thể hiện niềm vui và sự sáng tạo qua lời nói, nghệ thuật hoặc biểu diễn",
+          "Lạc quan và quyến rũ là đặc điểm nổi bật",
+          "Có thể cần học cách tập trung và tránh sự hời hợt"
+        ] : language === 'it' ? [
+          "Vibranti, espressivi e pieni di energia creativa",
+          "Prosperano in contesti sociali e amano intrattenere o ispirare",
+          "Esprimono gioia e creatività attraverso parole, arte o performance",
+          "Ottimismo e fascino sono i loro marchi di fabbrica",
+          "Potrebbero aver bisogno di imparare a concentrarsi ed evitare la superficialità"
+        ] : [
+          "活気があり、表現力豊かで創造的エネルギーに満ちている",
+          "社交的な場で成長し、人を楽しませたり刺激を与えるのが好き",
+          "言葉、芸術、パフォーマンスを通じて喜びと創造性を表現",
+          "楽観主義と魅力が彼らの特徴",
+          "集中力を学び、表面的になることを避ける必要があるかもしれない"
+        ]
+      },
+      4: {
+        title: language === 'en' ? "The Builder" : language === 'vi' ? "Người Xây Dựng" : language === 'it' ? "Il Costruttore" : "建設者",
+        components: language === 'en' ? "stability, discipline, structure" :
+                   language === 'vi' ? "ổn định, kỷ luật, cấu trúc" :
+                   language === 'it' ? "stabilità, disciplina, struttura" :
+                   "安定、規律、構造",
+        traits: language === 'en' ? [
+          "Strong willpower and can turn dreams into reality through discipline",
+          "Often experience early struggles but grow stronger over time",
+          "Work best when they build solid foundations and stay consistent",
+          "Creative minds with a practical approach",
+          "Excel at building stable systems in business, family, or community"
+        ] : language === 'vi' ? [
+          "Ý chí mạnh mẽ và có thể biến giấc mơ thành hiện thực qua kỷ luật",
+          "Thường trải qua khó khăn ban đầu nhưng trở nên mạnh mẽ hơn theo thời gian",
+          "Làm việc tốt nhất khi xây dựng nền tảng vững chắc và duy trì nhất quán",
+          "Có tư duy sáng tạo với cách tiếp cận thực tế",
+          "Xuất sắc trong việc xây dựng hệ thống ổn định trong kinh doanh, gia đình hoặc cộng đồng"
+        ] : language === 'it' ? [
+          "Forte forza di volontà e possono trasformare i sogni in realtà attraverso la disciplina",
+          "Spesso sperimentano lotte iniziali ma diventano più forti nel tempo",
+          "Lavorano meglio quando costruiscono fondamenta solide e rimangono coerenti",
+          "Menti creative con un approccio pratico",
+          "Eccellono nel costruire sistemi stabili negli affari, famiglia o comunità"
+        ] : [
+          "強い意志力を持ち、規律を通じて夢を現実に変えることができる",
+          "しばしば初期の困難を経験するが、時間と共により強くなる",
+          "堅固な基盤を築き、一貫性を保つときに最高の働きをする",
+          "実用的なアプローチを持つ創造的な心",
+          "ビジネス、家族、コミュニティで安定したシステムを構築するのが得意"
+        ]
+      },
+      5: {
+        title: language === 'en' ? "The Adventurer" : language === 'vi' ? "Nhà Thám Hiểm" : language === 'it' ? "L'Avventuriero" : "冒険家",
+        components: language === 'en' ? "freedom, versatility, curiosity" :
+                   language === 'vi' ? "tự do, linh hoạt, tò mò" :
+                   language === 'it' ? "libertà, versatilità, curiosità" :
+                   "自由、多様性、好奇心",
+        traits: language === 'en' ? [
+          "Dynamic and thrive on variety and new experiences",
+          "Curious, energetic, and easily bored by routine",
+          "Communication comes naturally and they seek freedom in all areas",
+          "Challenge is to avoid scattering energy and develop discipline",
+          "When balanced, they live a life full of excitement and growth"
+        ] : language === 'vi' ? [
+          "Năng động và phát triển với sự đa dạng và trải nghiệm mới",
+          "Tò mò, năng động và dễ chán với thói quen",
+          "Giao tiếp tự nhiên và tìm kiếm tự do trong mọi lĩnh vực",
+          "Thách thức là tránh phân tán năng lượng và phát triển kỷ luật",
+          "Khi cân bằng, họ sống một cuộc sống đầy phấn khích và phát triển"
+        ] : language === 'it' ? [
+          "Dinamici e prosperano con varietà e nuove esperienze",
+          "Curiosi, energici e facilmente annoiati dalla routine",
+          "La comunicazione viene naturale e cercano libertà in tutte le aree",
+          "La sfida è evitare di disperdere l'energia e sviluppare disciplina",
+          "Quando equilibrati, vivono una vita piena di eccitazione e crescita"
+        ] : [
+          "ダイナミックで、多様性と新しい体験で成長する",
+          "好奇心旺盛で活発、ルーティンに飽きやすい",
+          "コミュニケーションが自然で、すべての分野で自由を求める",
+          "エネルギーを散漫にせず、規律を身につけることが課題",
+          "バランスが取れているとき、興奮と成長に満ちた人生を送る"
+        ]
+      },
+      6: {
+        title: language === 'en' ? "The Nurturer" : language === 'vi' ? "Người Nuôi Dưỡng" : language === 'it' ? "Il Nutritore" : "育成者",
+        components: language === 'en' ? "responsibility, care, harmony" :
+                   language === 'vi' ? "trách nhiệm, chăm sóc, hòa hợp" :
+                   language === 'it' ? "responsabilità, cura, armonia" :
+                   "責任、ケア、調和",
+        traits: language === 'en' ? [
+          "Loving, compassionate, and protective by nature",
+          "Often take on caretaker roles and are drawn to family and community",
+          "Bring harmony and beauty into their environments",
+          "Sometimes can become overly responsible or controlling",
+          "Their strength lies in service and emotional support"
+        ] : language === 'vi' ? [
+          "Yêu thương, từ bi và bảo vệ theo bản tính",
+          "Thường đảm nhận vai trò chăm sóc và bị thu hút bởi gia đình và cộng đồng",
+          "Mang lại sự hòa hợp và vẻ đẹp v��o môi trường của họ",
+          "Đôi khi có thể trở nên quá có trách nhiệm hoặc kiểm soát",
+          "Sức mạnh của họ nằm ở việc phục vụ và hỗ trợ cảm xúc"
+        ] : language === 'it' ? [
+          "Amorevoli, compassionevoli e protettivi per natura",
+          "Spesso assumono ruoli di caregiver e sono attratti dalla famiglia e comunità",
+          "Portano armonia e bellezza nei loro ambienti",
+          "A volte possono diventare eccessivamente responsabili o controllanti",
+          "La loro forza risiede nel servizio e nel supporto emotivo"
+        ] : [
+          "本質的に愛情深く、思いやりがあり、保護的",
+          "しばしば世話役の役割を担い、家族やコミュニティに惹かれる",
+          "環境に調和と美をもたらす",
+          "時として過度に責任感を感じたり、コントロールしがちになることも",
+          "彼らの強みはサービスと感情的サポートにある"
+        ]
+      },
+      7: {
+        title: language === 'en' ? "The Seeker" : language === 'vi' ? "Người Tìm Kiếm" : language === 'it' ? "Il Cercatore" : "探求者",
+        components: language === 'en' ? "introspection, wisdom, analysis" :
+                   language === 'vi' ? "nội tâm, khôn ngoan, phân tích" :
+                   language === 'it' ? "introspezione, saggezza, analisi" :
+                   "内省、知恵、分析",
+        traits: language === 'en' ? [
+          "Thinkers, philosophers, and spiritual seekers",
+          "Need time alone to reflect and recharge",
+          "Often question the deeper meaning of life and are highly intuitive",
+          "Love learning, especially in science, metaphysics, or psychology",
+          "Can sometimes seem distant or mysterious to others"
+        ] : language === 'vi' ? [
+          "Những nhà tư tưởng, triết gia và người tìm kiếm tâm linh",
+          "Cần thời gian một mình để suy ngẫm và nạp lại năng lượng",
+          "Thường đặt câu hỏi về ý nghĩa sâu sắc của cuộc sống và có trực giác cao",
+          "Thích học hỏi, đặc biệt trong khoa học, siêu hình học hoặc tâm lý học",
+          "Đôi khi có thể tỏ ra xa cách hoặc bí ẩn với người khác"
+        ] : language === 'it' ? [
+          "Pensatori, filosofi e cercatori spirituali",
+          "Hanno bisogno di tempo da soli per riflettere e ricaricarsi",
+          "Spesso questionano il significato più profondo della vita e sono altamente intuitivi",
+          "Amano imparare, specialmente in scienza, metafisica o psicologia",
+          "A volte possono sembrare distanti o misteriosi agli altri"
+        ] : [
+          "思想家、哲学者、精神的探求者",
+          "反省し、エネルギーを補充するために一人の時間が必要",
+          "しばしば人生の深い意味を問い、高い直感力を持つ",
+          "特に科学、形而上学、心理学の学習を愛する",
+          "時として他者には距離感があったり神秘的に見えることがある"
+        ]
+      },
+      8: {
+        title: language === 'en' ? "The Achiever" : language === 'vi' ? "Người Đạt Được" : language === 'it' ? "Il Realizzatore" : "達成者",
+        components: language === 'en' ? "power, ambition, material success" :
+                   language === 'vi' ? "quyền lực, tham vọng, thành công vật chất" :
+                   language === 'it' ? "potere, ambizione, successo materiale" :
+                   "力、野心、物質的成功",
+        traits: language === 'en' ? [
+          "Powerful, strategic, and goal-oriented individuals",
+          "Natural managers who often gravitate toward business or leadership",
+          "Driven to achieve and often focus on material and financial success",
+          "Challenge is to manage control, ego, and find balance between power and compassion",
+          "When aligned, they can create real-world success and impact"
+        ] : language === 'vi' ? [
+          "Những cá nhân mạnh mẽ, chiến lược và hướng mục tiêu",
+          "Nhà quản lý bẩm sinh thường hướng đến kinh doanh hoặc lãnh đạo",
+          "Được thúc đẩy để đạt được và thường tập trung vào thành công vật chất và tài chính",
+          "Thách thức là quản lý sự kiểm soát, cái tôi và tìm sự cân bằng giữa quyền lực và lòng trắc ẩn",
+          "Khi phù hợp, họ có thể tạo ra thành công và tác động trong thế giới thực"
+        ] : language === 'it' ? [
+          "Individui potenti, strategici e orientati agli obiettivi",
+          "Manager naturali che spesso gravitano verso il business o la leadership",
+          "Spinti a raggiungere e spesso si concentrano sul successo materiale e finanziario",
+          "La sfida è gestire il controllo, l'ego e trovare equilibrio tra potere e compassione",
+          "Quando allineati, possono creare successo e impatto nel mondo reale"
+        ] : [
+          "力強く、戦略的で目標志向の個人",
+          "ビジネスやリーダーシップに引かれる天然のマネージャー",
+          "達成への意欲があり、しばしば物質的・金銭的成功に焦点を当てる",
+          "コントロール、エゴを管理し、力と思いやりのバランスを見つけることが課題",
+          "調和がとれているとき、現実世界での成功と影響を生み出すことができる"
+        ]
+      },
+      9: {
+        title: language === 'en' ? "The Humanitarian" : language === 'vi' ? "Người Nhân Đạo" : language === 'it' ? "L'Umanitario" : "人道主義者",
+        components: language === 'en' ? "compassion, idealism, generosity" :
+                   language === 'vi' ? "lòng trắc ẩn, lý tưởng, rộng lượng" :
+                   language === 'it' ? "compassione, idealismo, generosità" :
+                   "思いやり、理想主義、寛大さ",
+        traits: language === 'en' ? [
+          "Compassionate, wise, and deeply connected to humanity",
+          "Idealists who want to make the world a better place",
+          "Art, service, and healing are often part of their journey",
+          "May carry emotional wounds that lead them to help others",
+          "Their path is about unconditional love and service on a large scale"
+        ] : language === 'vi' ? [
+          "Từ bi, khôn ngoan và kết nối sâu sắc với nhân loại",
+          "Những người lý tưởng muốn làm cho thế giới trở nên tốt đẹp hơn",
+          "Nghệ thuật, phục vụ và chữa lành thường là một phần của hành trình",
+          "Có thể mang theo những vết thương cảm xúc dẫn đến việc giúp đỡ người khác",
+          "Con đường của họ là về tình yêu vô điều kiện và phục vụ trên quy mô lớn"
+        ] : language === 'it' ? [
+          "Compassionevoli, saggi e profondamente connessi all'umanità",
+          "Idealisti che vogliono rendere il mondo un posto migliore",
+          "Arte, servizio e guarigione sono spesso parte del loro viaggio",
+          "Potrebbero portare ferite emotive che li portano ad aiutare gli altri",
+          "Il loro percorso riguarda l'amore incondizionato e il servizio su larga scala"
+        ] : [
+          "思いやりがあり、賢明で、人類と深くつながっている",
+          "世界をより良い場所にしたい理想主義者",
+          "芸術、奉仕、癒しがしばしば彼らの旅の一部",
+          "他者を助けることにつながる感情的な傷を抱えているかもしれない",
+          "彼らの道は無条件の愛と大規模な奉仕について"
+        ]
+      },
+      11: {
+        title: language === 'en' ? "The Visionary — Master Number" : language === 'vi' ? "Người Có Tầm Nhìn — Số Chủ" : language === 'it' ? "Il Visionario — Numero Maestro" : "ビジョナリー — マスターナンバー",
+        components: language === 'en' ? "intuition, inspiration, spiritual insight" :
+                   language === 'vi' ? "trực giác, cảm hứng, thấu hiểu tâm linh" :
+                   language === 'it' ? "intuizione, ispirazione, intuizione spirituale" :
+                   "直感、インスピレーション、精神的洞察",
+        traits: language === 'en' ? [
+          "Master Number — highly spiritual, intuitive, and visionary",
+          "Often feel a deep sense of purpose from an early age",
+          "May experience intense inner conflict, needing time to align with their calling",
+          "Meant to uplift and inspire others through teaching, healing, or art",
+          "Challenge is to master self-doubt and embrace their spiritual gifts"
+        ] : language === 'vi' ? [
+          "Số Chủ — rất tâm linh, trực giác và có tầm nhìn",
+          "Thường cảm thấy một mục đích sâu sắc từ khi còn nhỏ",
+          "Có thể trải qua xung đột nội tâm dữ dội, cần thời gian để phù hợp với sứ mệnh",
+          "Được sinh ra để nâng đỡ và truyền cảm hứng cho người khác qua giảng dạy, chữa lành hoặc nghệ thuật",
+          "Thách thức là làm chủ sự nghi ngờ bản thân và chấp nhận những món quà tâm linh"
+        ] : language === 'it' ? [
+          "Numero Maestro — altamente spirituale, intuitivo e visionario",
+          "Spesso sentono un profondo senso di scopo fin dalla giovane età",
+          "Potrebbero sperimentare conflitti interni intensi, necessitando tempo per allinearsi con la loro chiamata",
+          "Destinati a elevare e ispirare gli altri attraverso insegnamento, guarigione o arte",
+          "La sfida è padroneggiare l'autodubito e abbracciare i loro doni spirituali"
+        ] : [
+          "マスターナンバー — 高度に精神的、直感的、ビジョナリー",
+          "しばしば若い頃から深い目的意識を感じる",
+          "激しい内的葛藤を経験し、自分の使命と調和するのに時間が必要かもしれない",
+          "教育、癒し、芸術を通じて他者を高め、インスピレーションを与える運命",
+          "自己疑念を克服し、精神的な才能を受け入れることが課題"
+        ]
+      },
+      22: {
+        title: language === 'en' ? "The Master Builder — Master Number" : language === 'vi' ? "Người Xây Dựng Bậc Thầy — Số Chủ" : language === 'it' ? "Il Costruttore Maestro — Numero Maestro" : "マスタービルダー — マスターナンバー",
+        components: language === 'en' ? "vision, leadership, manifestation" :
+                   language === 'vi' ? "tầm nhìn, lãnh đạo, hiện thực hóa" :
+                   language === 'it' ? "visione, leadership, manifestazione" :
+                   "ビジョン、リーダーシップ、現実化",
+        traits: language === 'en' ? [
+          "Master Number combining spiritual vision with practical action",
+          "Capable of building things that last — movements, communities, legacies",
+          "Have both intuition and discipline, making them powerful forces for change",
+          "Challenge is to believe in their potential and not settle for mediocrity",
+          "Born to turn dreams into reality on a large scale"
+        ] : language === 'vi' ? [
+          "Số Chủ kết hợp tầm nhìn tâm linh với hành động thực tế",
+          "Có khả năng xây dựng những thứ bền vững — các phong trào, cộng đồng, di sản",
+          "Có cả trực giác và kỷ luật, khiến họ trở thành lực lượng mạnh mẽ cho sự thay đổi",
+          "Thách thức là tin vào tiềm năng của họ và không chấp nhận sự tầm thường",
+          "Sinh ra để biến giấc mơ thành hiện thực trên quy mô lớn"
+        ] : language === 'it' ? [
+          "Numero Maestro che combina visione spirituale con azione pratica",
+          "Capaci di costruire cose durature — movimenti, comunità, eredità",
+          "Hanno sia intuizione che disciplina, rendendoli forze potenti per il cambiamento",
+          "La sfida è credere nel loro potenziale e non accontentarsi della mediocrità",
+          "Nati per trasformare i sogni in realtà su larga scala"
+        ] : [
+          "精神的ビジョンと実践的行動を組み合わせるマスターナンバー",
+          "持続するもの — 運動、コミュニティ、遺産を構築する能力がある",
+          "直感と規律の両方を持ち、変化のための強力な力となる",
+          "自分の可能性を信じ、平凡に甘んじないことが課題",
+          "大規模に夢を現実に変えるために生まれた"
+        ]
+      }
+    };
+
+    return meanings[number] || {
+      title: language === 'en' ? "Unique Energy" : language === 'vi' ? "Năng Lượng Độc Đáo" : language === 'it' ? "Energia Unica" : "ユニークなエネルギー",
+      components: language === 'en' ? "special energy" : language === 'vi' ? "năng lượng đặc biệt" : language === 'it' ? "energia speciale" : "特別なエネルギー",
+      traits: [language === 'en' ? "A unique and special energy surrounds this number" :
+              language === 'vi' ? "Một năng lượng độc đáo và đặc biệt bao quanh con số này" :
+              language === 'it' ? "Un'energia unica e speciale circonda questo numero" :
+              "この数字には独特で特別なエネルギーが宿っています"]
+    };
+  };
+
   const getDetailedMeaning = (number: number, type: string) => {
     const meanings: { [key: string]: { [key: number]: any } } = {
       lifePath: {
@@ -414,7 +780,7 @@ export default function Index() {
           relationships: language === 'en' ? "Needs deep, meaningful connections with understanding partners" :
                         language === 'vi' ? "Cần những kết nối sâu sắc, ý nghĩa với đối tác hiểu biết" :
                         language === 'it' ? "Ha bisogno di connessioni profonde e significative con partner comprensivi" :
-                        "理解のあるパートナーとの深く意味��あるつながりが必要",
+                        "理解のあるパートナーとの深く意味のあるつながりが必要",
           growth: language === 'en' ? "Balance solitude with meaningful social connections" :
                  language === 'vi' ? "Cân bằng sự cô đơn với các kết nối xã hội có ý nghĩa" :
                  language === 'it' ? "Bilanciare la solitudine con connessioni sociali significative" :
