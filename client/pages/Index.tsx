@@ -266,7 +266,7 @@ const translations = {
     yourTalentsAbilities: "あなたの才能と能力",
     innerDesiresMotivations: "あなたの内なる願望と動機",
     outerPersonalityTraits: "あなたの外的な性格",
-    aboutTitle: "数秘術について",
+    aboutTitle: "数秘術��ついて",
     aboutText:
       "数秘術は、あなたの人生における数字の背後にある隠された意味を発見する古代の実践です。各数字は独特の振動とエネルギーを持ち、あなたの性格、人生の目的、精神的な道についての洞察を明らかにすることができます。",
     lifePathDesc:
@@ -536,7 +536,7 @@ export default function Index() {
                     "Potrebbero dover fare attenzione all'arroganza o all'impazienza",
                   ]
                 : [
-                    "独立心と��イオニア精神を持つ生まれながらのリーダー",
+                    "独立心とパイオニア精神を持つ生まれながらのリーダー",
                     "主導権を握ることで成長し、指示されることを嫌う",
                     "革新性と独創性が彼らの強み",
                     "人生で自分だけの道を切り開く必要がある",
@@ -586,7 +586,7 @@ export default function Index() {
                     "L'intelligenza emotiva è un dono naturale",
                   ]
                 : [
-                    "人間���係を大切にする穏やかで平和を愛する人々",
+                    "人間関係を大切にする穏やかで平和を愛する人々",
                     "他者のニーズに敏感で、調和を作り出すのが得意",
                     "単独行動よりもパートナーシップを好み、外交が得意",
                     "他者に合わせる中で自分のアイデンティティを失わないよう注意が必要",
@@ -859,7 +859,7 @@ export default function Index() {
               ? "quyền lực, tham vọng, thành công vật chất"
               : language === "it"
                 ? "potere, ambizione, successo materiale"
-                : "力、野心、物質的成功",
+                : "力��野心、物質的成功",
         traits:
           language === "en"
             ? [
@@ -901,7 +901,7 @@ export default function Index() {
               ? "Người Nhân Đạo"
               : language === "it"
                 ? "L'Umanitario"
-                : "人道主義者",
+                : "人道���義者",
         components:
           language === "en"
             ? "compassion, idealism, generosity"
@@ -924,7 +924,7 @@ export default function Index() {
                   "Từ bi, khôn ngoan và kết nối sâu sắc với nhân loại",
                   "Những người lý tưởng muốn làm cho thế giới trở nên tốt đẹp hơn",
                   "Nghệ thuật, phục vụ và chữa lành thường là một phần của hành trình",
-                  "Có thể mang theo những vết thương cảm xúc dẫn đến việc giúp đỡ người khác",
+                  "Có thể mang theo những vết thương cảm xúc dẫn đến việc giúp đỡ ngư���i khác",
                   "Con đường của họ là về tình yêu vô điều kiện và phục vụ trên quy mô lớn",
                 ]
               : language === "it"
@@ -1037,7 +1037,7 @@ export default function Index() {
                   ]
                 : [
                     "精神的ビジョンと実践的行動を組み合わせるマスターナンバー",
-                    "持続するもの — 運動、コミ���ニティ、遺産を構築する能力がある",
+                    "持続するもの — 運動、コミュニティ、遺産を構築する能力がある",
                     "直感と規律の���方を持ち、変化のための強力な力となる",
                     "自分の可能性を信じ、平凡に甘んじないことが課題",
                     "大規模に夢を現実に変えるために生まれた",
@@ -1476,7 +1476,7 @@ export default function Index() {
               : language === "vi"
                 ? "Học cách hợp tác trong khi duy trì phẩm chất lãnh đạo"
                 : language === "it"
-                  ? "Imparare a collaborare mantenendo le qualità di leadership"
+                  ? "Imparare a collaborare mantenendo le qualit�� di leadership"
                   : "リーダーシップの資質��維持しながら協力することを学ぶ",
         },
         7: {
@@ -1565,7 +1565,7 @@ export default function Index() {
                 ? "Cân bằng sự cô đơn với các kết nối xã hội có ý nghĩa"
                 : language === "it"
                   ? "Bilanciare la solitudine con connessioni sociali significative"
-                  : "孤独と意味のある社会的つながりのバランスを取る",
+                  : "孤独と意味のある社会的つながりのバラ���スを取る",
         },
       },
     };
@@ -1635,7 +1635,7 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-purple-800 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black from-40% via-gray-900 to-purple-900 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
