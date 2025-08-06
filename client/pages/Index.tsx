@@ -88,7 +88,7 @@ const translations = {
     birthDate: "Ngày Sinh",
     required: "*",
     fullName: "Họ Tên Đầy Đủ (Tùy chọn)",
-    namePlaceholder: "Nhập họ tên đầy đủ để có bài đọc hoàn chỉnh",
+    namePlaceholder: "Nhập họ tên đầy đủ để có b��i đọc hoàn chỉnh",
     revealButton: "Tiết Lộ Các Số Của Tôi",
     calculating: "Đang Tính Toán Các Số Của Bạn...",
     lifePathTitle: "Số Đường Đời",
@@ -205,7 +205,7 @@ const translations = {
     relationships: "人間関係",
     growthPath: "成長の道",
     dayOfBirth: "誕生日",
-    reflectsTraits: "はあなたの自然な才能と性��的特徴を反映しています。",
+    reflectsTraits: "はあなたの自然な才能と性格的特徴を反映しています。",
     calculation: "計算:",
     traits: "特徴:",
     howOthersSee: "他の人があなたをどう見るか:",
@@ -540,7 +540,7 @@ export default function Index() {
         ] : language === 'vi' ? [
           "Yêu thương, từ bi và bảo vệ theo bản tính",
           "Thường đảm nhận vai trò chăm sóc và bị thu hút bởi gia đình và cộng đồng",
-          "Mang lại sự hòa hợp và vẻ đẹp v��o môi trường của họ",
+          "Mang lại sự hòa hợp và vẻ đẹp vào môi trường của họ",
           "Đôi khi có thể trở nên quá có trách nhiệm hoặc kiểm soát",
           "Sức mạnh của họ nằm ở việc phục vụ và hỗ trợ cảm xúc"
         ] : language === 'it' ? [
@@ -554,7 +554,7 @@ export default function Index() {
           "しばしば世話役の役割を担い、家族やコミュニティに惹かれる",
           "環境に調和と美をもたらす",
           "時として過度に責任感を感じたり、コントロールしがちになることも",
-          "彼らの強みはサービスと感情的サポートにある"
+          "彼らの強みはサービスと感情的��ポートにある"
         ]
       },
       7: {
@@ -712,7 +712,7 @@ export default function Index() {
         ] : [
           "精神的ビジョンと実践的行動を組み合わせるマスターナンバー",
           "持続するもの — 運動、コミュニティ、遺産を構築する能力がある",
-          "直感と規律の両方を持ち、変化のための強力な力となる",
+          "直感と規���の両方を持ち、変化のための強力な力となる",
           "自分の可能性を信じ、平凡に甘んじないことが課題",
           "大規模に夢を現実に変えるために生まれた"
         ]
@@ -757,7 +757,7 @@ export default function Index() {
           growth: language === 'en' ? "Learn to collaborate while maintaining leadership qualities" :
                  language === 'vi' ? "Học cách hợp tác trong khi duy trì phẩm chất lãnh đạo" :
                  language === 'it' ? "Imparare a collaborare mantenendo le qualità di leadership" :
-                 "リーダーシップの資質を維持しながら協力することを学ぶ"
+                 "リーダーシップの資質を維���しながら協力することを学ぶ"
         },
         7: {
           title: language === 'en' ? "The Seeker" : language === 'vi' ? "Người Tìm Kiếm" : language === 'it' ? "Il Cercatore" : "探求者",
@@ -992,32 +992,31 @@ export default function Index() {
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
                     <span className="text-xl font-bold text-white">{results.birthdayNumber}</span>
                   </div>
-                  📆 2. {t.birthdayTitle}: {results.birthdayNumber}
+                  📆 2. {t.birthdayTitle}: {results.birthdayNumber} ({getBirthdayMeaning(results.birthdayNumber).title})
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-red-200">
-                  {t.dayOfBirth} ({results.birthDate.day}) {t.reflectsTraits}
-                </p>
-                
-                {results.calculations.birthdaySteps.length > 0 && (
-                  <div>
-                    <h4 className="text-lg font-semibold text-red-200 mb-2">➤ {t.calculation}</h4>
-                    <div className="bg-black/30 p-3 rounded-lg font-mono text-red-100">
-                      {results.calculations.birthdaySteps.map((step, index) => (
-                        <div key={index}>{step}</div>
-                      ))}
-                    </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-red-200 mb-2">➤ {t.calculation}</h4>
+                  <div className="bg-black/30 p-3 rounded-lg font-mono text-red-100">
+                    {results.calculations.birthdaySteps.map((step, index) => (
+                      <div key={index}>{step}</div>
+                    ))}
                   </div>
-                )}
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold text-red-200 mb-2">
+                    ➤ Components: {results.birthdayNumber} ({getBirthdayMeaning(results.birthdayNumber).components})
+                  </h4>
+                </div>
 
                 <div className="bg-black/20 p-4 rounded-lg">
-                  <h5 className="font-semibold text-red-100 mb-2">💎 {t.birthdayTitle} {results.birthdayNumber} {t.traits}</h5>
-                  <div className="space-y-2 text-red-200 text-sm">
-                    {results.birthdayNumber === 4 && <p>• {language === 'en' ? "Strong willpower and ability to build solid foundations" : 
-                                                           language === 'vi' ? "Ý chí mạnh mẽ và khả năng xây dựng nền tảng vững chắc" :
-                                                           language === 'it' ? "Forte forza di volontà e capacità di costruire fondamenta solide" :
-                                                           "強い意志力と堅固な基盤を築く能力"}</p>}
+                  <h5 className="font-semibold text-red-100 mb-3">💎 {t.birthdayTitle} {results.birthdayNumber} {t.traits}</h5>
+                  <div className="space-y-3 text-red-200 text-sm">
+                    {getBirthdayMeaning(results.birthdayNumber).traits.map((trait: string, index: number) => (
+                      <p key={index}>• {trait}</p>
+                    ))}
                   </div>
                 </div>
               </CardContent>
@@ -1077,7 +1076,7 @@ export default function Index() {
                     </p>
                     
                     <div>
-                      <h4 className="text-lg font-semibold text-purple-200 mb-2">➤ {t.calculation}</h4>
+                      <h4 className="text-lg font-semibold text-purple-200 mb-2">��� {t.calculation}</h4>
                       <div className="bg-black/30 p-3 rounded-lg font-mono text-purple-100 text-sm">
                         {results.calculations.expressionSteps.map((step, index) => (
                           <div key={index}>{step}</div>
