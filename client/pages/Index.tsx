@@ -88,7 +88,7 @@ const translations = {
     birthDate: "Ngày Sinh",
     required: "*",
     fullName: "Họ Tên Đầy Đủ (Tùy chọn)",
-    namePlaceholder: "Nhập họ tên đầy đủ để có bài đọc hoàn chỉnh",
+    namePlaceholder: "Nhập họ tên đầy đủ để có bài đ���c hoàn chỉnh",
     revealButton: "Tiết Lộ Các Số Của Tôi",
     calculating: "Đang Tính Toán Các Số Của Bạn...",
     lifePathTitle: "Số Đường Đời",
@@ -223,7 +223,7 @@ const translations = {
     innerDesiresMotivations: "あなたの内なる願望と動機",
     outerPersonalityTraits: "あなたの外的な性格",
     aboutTitle: "数秘術について",
-    aboutText: "数秘術は、あなたの人生におけ���数字の背後にある隠された意味を発見する古代の実践です。各数字は独特の振動とエネルギーを持ち、あなたの性格、人生の目的、精神的な道についての洞察を明らかにすることができます。",
+    aboutText: "数秘術は、あなたの人生における数字の背後にある隠された意味を発見する古代の実践です。各数字は独特の振動とエネルギーを持ち、あなたの性格、人生の目的、精神的な道についての洞察を明らかにすることができます。",
     lifePathDesc: "あなたの最も重要な数字で、人生の目的と旅路を明らかにします。",
     expressionDesc: "あなたの自然な才能と世界への表現方法を示します。",
     soulUrgeDesc: "あなたの内なる願望と最も深いレベルでの動機を明らかにします。",
@@ -381,7 +381,7 @@ export default function Index() {
           "Lãnh đạo bẩm sinh, độc lập và tiên phong",
           "Họ phát triển khi có thể chủ động và không thích bị sai khiến",
           "Đổi mới và sáng tạo là điểm mạnh của họ",
-          "Cần tự tạo con đường riêng trong cuộc sống",
+          "Cần tự tạo con đ��ờng riêng trong cuộc sống",
           "Có thể cần cẩn thận với sự kiêu ngạo hoặc thiếu kiên nhẫn"
         ] : language === 'it' ? [
           "Leader nati che sono indipendenti e pionieristici",
@@ -425,7 +425,7 @@ export default function Index() {
           "人間関係を大切にする穏やかで平和を愛する人々",
           "他者のニーズに敏感で、調和を作り出すのが得意",
           "単独行動よりもパートナーシップを好み、外交が得意",
-          "他者に合わせる中で自分のアイデンティティを失わ��いよう注意が必要",
+          "他者に合わせる中で自分のアイデンティティを失わないよう注意が必要",
           "感情的知性は天賦の才能"
         ]
       },
@@ -445,7 +445,7 @@ export default function Index() {
           "Sống động, biểu cảm và đầy năng lượng sáng tạo",
           "Phát triển trong môi trường xã hội và thích giải trí hoặc truyền cảm hứng",
           "Thể hiện niềm vui và sự sáng tạo qua lời nói, nghệ thuật hoặc biểu diễn",
-          "Lạc quan và quyến rũ là đ���c điểm nổi bật",
+          "Lạc quan và quyến rũ là đặc điểm nổi bật",
           "Có thể cần học cách tập trung và tránh sự hời hợt"
         ] : language === 'it' ? [
           "Vibranti, espressivi e pieni di energia creativa",
@@ -464,7 +464,7 @@ export default function Index() {
       4: {
         title: language === 'en' ? "The Builder" : language === 'vi' ? "Người Xây Dựng" : language === 'it' ? "Il Costruttore" : "建設者",
         components: language === 'en' ? "stability, discipline, structure" :
-                   language === 'vi' ? "ổn định, kỷ luật, c��u trúc" :
+                   language === 'vi' ? "ổn định, kỷ luật, cấu trúc" :
                    language === 'it' ? "stabilità, disciplina, struttura" :
                    "安定、規律、構造",
         traits: language === 'en' ? [
@@ -519,7 +519,7 @@ export default function Index() {
           "Quando equilibrati, vivono una vita piena di eccitazione e crescita"
         ] : [
           "ダイナミックで、多様性と新しい体験で成長する",
-          "好奇心旺盛で活発、ルーテ���ンに飽きやすい",
+          "好奇心旺盛で活発、ルーティンに飽きやすい",
           "コミュニケーションが自然で、すべての分野で自由を求める",
           "エネルギーを散漫にせず、規律を身につけることが課題",
           "バランスが取れているとき、興奮と成長に満ちた人生を送る"
@@ -539,7 +539,7 @@ export default function Index() {
           "Their strength lies in service and emotional support"
         ] : language === 'vi' ? [
           "Yêu thương, từ bi và bảo vệ theo bản tính",
-          "Thường đảm nhận vai trò chăm s��c và bị thu hút bởi gia đình và cộng đồng",
+          "Thường đảm nhận vai trò chăm sóc và bị thu hút bởi gia đình và cộng đồng",
           "Mang lại sự hòa hợp và vẻ đẹp vào môi trường của họ",
           "Đôi khi có thể trở nên quá có trách nhiệm hoặc kiểm soát",
           "Sức mạnh của họ nằm ở việc phục vụ và hỗ trợ cảm xúc"
@@ -554,7 +554,7 @@ export default function Index() {
           "しばしば世話役の役割を担い、家族やコミュニティに惹かれる",
           "環境に調和と美をもたらす",
           "時として過度に責任感を感じたり、コントロールしがちになることも",
-          "彼らの強みはサービスと感情的サポートにある"
+          "彼らの強みはサービスと感情的サポ��トにある"
         ]
       },
       7: {
@@ -615,7 +615,7 @@ export default function Index() {
           "Quando allineati, possono creare successo e impatto nel mondo reale"
         ] : [
           "力強く、戦略的で目標志向の個人",
-          "ビジ��スやリーダーシップに引かれる天然のマネージャー",
+          "ビジネスやリーダーシップに引かれる天然のマネージャー",
           "達成への意欲があり、しばしば物質的・金銭的成功に焦点を当てる",
           "コントロール、エゴを管理し、力と思いやりのバランスを見つけることが課題",
           "調和がとれているとき、現実世界での成功と影響を生み出すことができる"
@@ -681,7 +681,7 @@ export default function Index() {
           "マスターナンバー — 高度に精神的、直感的、ビジョナリー",
           "しばしば若い頃から深い目的意識を感じる",
           "激しい内的葛藤を経験し、自分の使命と調和するのに時間が必要かもしれない",
-          "教育、癒し、芸術を通じて他者を高め、インスピレ��ションを与える運命",
+          "教育、癒し、芸術を通じて他者を高め、インスピレーションを与える運命",
           "自己疑念を克服し、精神的な才能を受け入れることが課題"
         ]
       },
@@ -698,7 +698,7 @@ export default function Index() {
           "Challenge is to believe in their potential and not settle for mediocrity",
           "Born to turn dreams into reality on a large scale"
         ] : language === 'vi' ? [
-          "Số Chủ kết hợp tầm nhìn tâm linh với hành động thực t��",
+          "Số Chủ kết hợp tầm nhìn tâm linh với hành động thực tế",
           "Có khả năng xây dựng những thứ bền vững — các phong trào, cộng đồng, di sản",
           "Có cả trực giác và kỷ luật, khiến họ trở thành lực lượng mạnh mẽ cho sự thay đổi",
           "Thách thức là tin vào tiềm năng của họ và không chấp nhận sự tầm thường",
@@ -712,7 +712,7 @@ export default function Index() {
         ] : [
           "精神的ビジョンと実践的行動を組み合わせるマスターナンバー",
           "持続するもの — 運動、コミュニティ、遺産を構築する能力がある",
-          "直感と規律の両方を持ち、変化のための強力な力となる",
+          "直感と規律の���方を持ち、変化のための強力な力となる",
           "自分の可能性を信じ、平凡に甘んじないことが課題",
           "大規模に夢を現実に変えるために生まれた"
         ]
@@ -745,7 +745,7 @@ export default function Index() {
       2: {
         title: language === 'en' ? "The Diplomat" : language === 'vi' ? "Nhà Ngoại Giao" : language === 'it' ? "Il Diplomatico" : "外交官",
         components: language === 'en' ? "kindness, cooperation, diplomacy" :
-                   language === 'vi' ? "tử tế, hợp tác, ngoại giao" :
+                   language === 'vi' ? "tử t��, hợp tác, ngoại giao" :
                    language === 'it' ? "gentilezza, cooperazione, diplomazia" :
                    "優しさ、協力、外交",
         perception: language === 'en' ? "You're seen as diplomatic, kind, and cooperative. People may view you as a good listener and peacekeeper." :
@@ -771,7 +771,7 @@ export default function Index() {
                    language === 'it' ? "affidabilità, struttura, lealtà" :
                    "信頼性、構造、忠誠心",
         perception: language === 'en' ? "You're seen as dependable, grounded, and hardworking. Others might see you as someone who values structure, planning, and loyalty." :
-                   language === 'vi' ? "Bạn được nhìn nhận là đáng tin cậy, vững chắc và chăm chỉ. Người khác có thể coi bạn là người coi trọng cấu trúc, kế ho��ch và lòng trung thành." :
+                   language === 'vi' ? "Bạn được nhìn nhận là đáng tin cậy, vững chắc và chăm chỉ. Người khác có thể coi bạn là người coi trọng cấu trúc, kế hoạch và lòng trung thành." :
                    language === 'it' ? "Sei visto come affidabile, con i piedi per terra e laborioso. Gli altri potrebbero vederti come qualcuno che apprezza struttura, pianificazione e lealtà." :
                    "あなたは信頼でき、地に足がついていて、勤勉だと見られています。他の人はあなたを構造、計画、忠誠心を重視する人として見るかもしれません。"
       },
@@ -806,7 +806,7 @@ export default function Index() {
         perception: language === 'en' ? "You're seen as mysterious, wise, and introspective. Others may perceive you as deep, thoughtful, or even a bit reserved." :
                    language === 'vi' ? "Bạn được nhìn nhận là bí ẩn, khôn ngoan và nội tâm. Người khác có thể coi bạn là sâu sắc, chu đáo, hoặc thậm chí hơi dè dặt." :
                    language === 'it' ? "Sei visto come misterioso, saggio e introspettivo. Gli altri possono percepirti come profondo, riflessivo o anche un po' riservato." :
-                   "あなたは神秘的で賢明、内省的だと見られてい���す。他の人はあなたを深く思慮深い、あるいは少し控えめな人として認識するかもしれません。"
+                   "あなたは神秘的で賢明、内省的だと見られています。他の人はあなたを深く思慮深い、あるいは少し控えめな人として認識するかもしれません。"
       },
       8: {
         title: language === 'en' ? "The Achiever" : language === 'vi' ? "Người Đạt Được" : language === 'it' ? "Il Realizzatore" : "達成者",
@@ -837,9 +837,9 @@ export default function Index() {
                    language === 'it' ? "ispirazione, intuizione, intuizione spirituale" :
                    "インスピレーション、直感、精神的洞察",
         perception: language === 'en' ? "You're seen as inspiring, intuitive, and visionary. People may feel drawn to your wisdom and spiritual insight." :
-                   language === 'vi' ? "Bạn được nhìn nhận là truyền cảm hứng, trực giác và có tầm nhìn. Mọi người có thể bị thu hút bởi trí tuệ và thấu hiểu tâm linh của bạn." :
+                   language === 'vi' ? "Bạn được nhìn nhận là truyền cảm hứng, trực giác và có tầm nhìn. Mọi người có thể bị thu hút bởi trí tuệ và thấu hiểu tâm linh c��a bạn." :
                    language === 'it' ? "Sei visto come ispirante, intuitivo e visionario. Le persone possono sentirsi attratte dalla tua saggezza e intuizione spirituale." :
-                   "あなたはインスピレーションを与え、直感的でビジョナリーだと見られています���人々はあなたの知恵と精神的洞察に惹かれるかもしれません。"
+                   "あなたはインスピレーションを与え、直感的でビジョナリーだと見られています。人々はあなたの知恵と精神的洞察に惹かれるかもしれません。"
       },
       22: {
         title: language === 'en' ? "The Master Builder — Master Number" : language === 'vi' ? "Người Xây Dựng Bậc Thầy — Số Chủ" : language === 'it' ? "Il Costruttore Maestro — Numero Maestro" : "マスタービルダー — マスターナンバー",
@@ -848,9 +848,9 @@ export default function Index() {
                    language === 'it' ? "potere, maestria, praticità" :
                    "力、熟練、実用性",
         perception: language === 'en' ? "You're seen as powerful, masterful, and practical. Others see your potential to achieve great things for the collective." :
-                   language === 'vi' ? "Bạn được nhìn nhận là mạnh mẽ, thành thạo và thực tế. Người khác thấy tiềm năng của bạn để đạt được những điều vĩ đại cho tập thể." :
+                   language === 'vi' ? "Bạn được nhìn nhận là mạnh mẽ, thành thạo và thực tế. Người khác thấy tiềm năng của bạn để đ���t được những điều vĩ đại cho tập thể." :
                    language === 'it' ? "Sei visto come potente, magistrale e pratico. Gli altri vedono il tuo potenziale per raggiungere grandi cose per il collettivo." :
-                   "あなたは力強く、熟練していて実用的だと見ら��ています。他の人はあなたが集合体のために偉大なことを成し遂げる可能性を見ています。"
+                   "あなた���力強く、熟練していて実用的だと見られています。他の人はあなたが集合体のために偉大なことを成し遂げる可能性を見ています。"
       }
     };
 
@@ -880,7 +880,7 @@ export default function Index() {
           challenges: language === 'en' ? ["Can be domineering", "Impatient", "Self-centered", "Stubborn"] :
                      language === 'vi' ? ["Có thể hống hách", "Thiếu kiên nhẫn", "Tự cho mình là trung tâm", "Cứng đầu"] :
                      language === 'it' ? ["Può essere prepotente", "Impaziente", "Egocentrico", "Testardo"] :
-                     ["支配的になりがち", "短気", "自���中心的", "頑固"],
+                     ["支配的になりがち", "短気", "自己中心的", "頑固"],
           career: language === 'en' ? "Entrepreneurship, management, politics, innovation, self-employment" :
                  language === 'vi' ? "Kinh doanh, quản lý, chính trị, đổi mới, tự kinh doanh" :
                  language === 'it' ? "Imprenditorialità, gestione, politica, innovazione, lavoro autonomo" :
@@ -892,7 +892,7 @@ export default function Index() {
           growth: language === 'en' ? "Learn to collaborate while maintaining leadership qualities" :
                  language === 'vi' ? "Học cách hợp tác trong khi duy trì phẩm chất lãnh đạo" :
                  language === 'it' ? "Imparare a collaborare mantenendo le qualità di leadership" :
-                 "リーダーシップの資質を維持しながら協力することを学ぶ"
+                 "リーダーシップの資質��維持しながら協力することを学ぶ"
         },
         7: {
           title: language === 'en' ? "The Seeker" : language === 'vi' ? "Người Tìm Kiếm" : language === 'it' ? "Il Cercatore" : "探求者",
@@ -1164,14 +1164,10 @@ export default function Index() {
                   <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center">
                     <span className="text-xl font-bold text-white">{results.attitudeNumber}</span>
                   </div>
-                  🪐 3. {t.attitudeTitle}: {results.attitudeNumber}
+                  🪐 3. {t.attitudeTitle}: {results.attitudeNumber} ({getAttitudeMeaning(results.attitudeNumber).title})
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-pink-200">
-                  {t.revealsPerception}
-                </p>
-                
                 <div>
                   <h4 className="text-lg font-semibold text-pink-200 mb-2">➤ {t.calculation}</h4>
                   <div className="bg-black/30 p-3 rounded-lg font-mono text-pink-100">
@@ -1181,13 +1177,23 @@ export default function Index() {
                   </div>
                 </div>
 
+                <div>
+                  <h4 className="text-lg font-semibold text-pink-200 mb-2">
+                    ➤ Components: {results.attitudeNumber} ({getAttitudeMeaning(results.attitudeNumber).components})
+                  </h4>
+                </div>
+
                 <div className="bg-black/20 p-4 rounded-lg">
-                  <h5 className="font-semibold text-pink-100 mb-2">👥 {t.howOthersSee}</h5>
+                  <h5 className="font-semibold text-pink-100 mb-3">👥 {t.howOthersSee}</h5>
                   <p className="text-pink-200 text-sm">
-                    {results.attitudeNumber === 6 && (language === 'en' ? "Caring, responsible, and nurturing" :
-                                                     language === 'vi' ? "Chu đáo, có trách nhiệm và nuôi dưỡng" :
-                                                     language === 'it' ? "Premuroso, responsabile e protettivo" :
-                                                     "思いやりがあり、責任感があり、育成的")}
+                    {getAttitudeMeaning(results.attitudeNumber).perception}
+                  </p>
+                </div>
+
+                <div className="bg-black/20 p-4 rounded-lg">
+                  <h5 className="font-semibold text-pink-100 mb-2">💫 {language === 'en' ? "Key Insights" : language === 'vi' ? "Hiểu Biết Chính" : language === 'it' ? "Intuizioni Chiave" : "主要な洞察"}:</h5>
+                  <p className="text-pink-200 text-sm">
+                    {t.revealsPerception}
                   </p>
                 </div>
               </CardContent>
