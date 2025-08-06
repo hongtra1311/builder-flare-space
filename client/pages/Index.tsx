@@ -121,7 +121,7 @@ const translations = {
     howOthersPerceive: "Cách người khác nhìn nhận bạn",
     yourTalentsAbilities: "Tài năng và khả năng của bạn",
     innerDesiresMotivations: "Khao khát và động lực bên trong",
-    outerPersonalityTraits: "Tính cách bên ngoài của bạn",
+    outerPersonalityTraits: "Tính cách b��n ngoài của bạn",
     aboutTitle: "Về Thần Số Học",
     aboutText: "Thần số học là thực hành cổ xưa khám phá những ý nghĩa ẩn giấu đằng sau các con số trong cuộc sống của bạn. Mỗi con số mang theo những rung động và năng lượng độc đáo có thể tiết lộ những hiểu biết về tính cách, mục đích sống và con đường tâm linh của bạn.",
     lifePathDesc: "Số quan trọng nhất của bạn, tiết lộ mục đích và hành trình cuộc đời.",
@@ -224,7 +224,7 @@ const translations = {
     outerPersonalityTraits: "あなたの外的な性格",
     aboutTitle: "数秘術について",
     aboutText: "数秘術は、あなたの人生における数字の背後にある隠された意味を発見する古代の実践です。各数字は独特の振動とエネルギーを持ち、あなたの性格、人生の目的、精神的な道についての洞察を明らかにすることができます。",
-    lifePathDesc: "あなたの最も重要な数字で、人生の目的と旅路を明らかにします。",
+    lifePathDesc: "あ���たの最も重要な数字で、人生の目的と旅路を明らかにします。",
     expressionDesc: "あなたの自然な才能と世界への表現方法を示します。",
     soulUrgeDesc: "あなたの内なる願望と最も深いレベルでの動機を明らかにします。",
     personalityDesc: "他の人があなたをどう認識し、世界に与える印象。",
@@ -373,7 +373,7 @@ export default function Index() {
           description: language === 'en' ? "Natural born leader, independent, pioneering spirit" : 
                       language === 'vi' ? "Lãnh đạo bẩm sinh, độc lập, tinh thần tiên phong" :
                       language === 'it' ? "Leader nato, indipendente, spirito pionieristico" :
-                      "生まれながらのリーダー、独立心、開拓精神",
+                      "生まれながらのリーダー、独立���、開拓精神",
           strengths: language === 'en' ? ["Independent", "Leadership", "Innovation", "Self-reliant", "Ambitious"] :
                     language === 'vi' ? ["Độc lập", "Lãnh đạo", "Đổi mới", "Tự lực", "Tham vọng"] :
                     language === 'it' ? ["Indipendente", "Leadership", "Innovazione", "Autosufficiente", "Ambizioso"] :
@@ -418,7 +418,7 @@ export default function Index() {
                         language === 'it' ? "Ha bisogno di connessioni profonde e significative con partner comprensivi" :
                         "理解のあるパートナーとの深く意味のあるつながりが必要",
           growth: language === 'en' ? "Balance solitude with meaningful social connections" :
-                 language === 'vi' ? "Cân bằng sự cô đơn v��i các kết nối xã hội có ý nghĩa" :
+                 language === 'vi' ? "Cân bằng sự cô đơn với các kết nối xã hội có ý nghĩa" :
                  language === 'it' ? "Bilanciare la solitudine con connessioni sociali significative" :
                  "孤独と意味のある社会的つながりのバランスを取る"
         }
@@ -877,7 +877,7 @@ export default function Index() {
         )}
 
         {/* Footer */}
-        <footer className="mt-8 pt-4 border-t border-purple-400/20">
+        <footer className="mt-4 pt-2 border-t border-purple-400/20">
           <div className="text-center">
             <p className="text-purple-300 text-sm">
               {t.footer}
