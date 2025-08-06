@@ -89,7 +89,7 @@ const translations = {
     required: "*",
     fullName: "Họ Tên Đầy Đủ (Tùy chọn)",
     namePlaceholder: "Nhập họ tên đầy đủ để có bài đọc hoàn chỉnh",
-    revealButton: "Tiết Lộ Các Số Của Tôi",
+    revealButton: "Tiết Lộ Các Số C���a Tôi",
     calculating: "Đang Tính Toán Các Số Của Bạn...",
     lifePathTitle: "Số Đường Đời",
     birthdayTitle: "Số Ngày Sinh",
@@ -183,7 +183,7 @@ const translations = {
   },
   ja: {
     title: "神秘の数字",
-    subtitle: "数秘術の古代の技法を通じて、あなたの生年月日と名前に隠された意味を発見してください",
+    subtitle: "数秘術の古代の技法を通じて、あ��たの生年月日と名前に隠された意味を発見してください",
     readingTitle: "あなたの数秘術リーディング",
     birthDate: "生年月日",
     required: "*",
@@ -218,7 +218,7 @@ const translations = {
     number: "数字",
     meaning: "意味",
     naturalTalentsAbilities: "自然な才能と能力",
-    howOthersPerceive: "他の人があなたをどう認識するか",
+    howOthersPerceive: "他の人があなたをどう認���するか",
     yourTalentsAbilities: "あなたの才能と能力",
     innerDesiresMotivations: "あなたの内なる願望と動機",
     outerPersonalityTraits: "あなたの外的な性格",
@@ -290,12 +290,10 @@ export default function Index() {
       const lifePathCalc = reduceToSingleDigitWithSteps(allDigits.reduce((a, b) => a + b, 0), lifePathSteps);
       const lifePathNumber = lifePathCalc.result;
 
-      // Birthday Number with steps
+      // Birthday Number with steps (sum of all digits in birth date)
       const birthdaySteps: string[] = [];
-      if (day > 9) {
-        birthdaySteps.push(`${t.birthdayTitle}: ${day}`);
-      }
-      const birthdayCalc = reduceToSingleDigitWithSteps(day, birthdaySteps);
+      birthdaySteps.push(`${allDigits.join(' + ')} = ${allDigits.reduce((a, b) => a + b, 0)}`);
+      const birthdayCalc = reduceToSingleDigitWithSteps(allDigits.reduce((a, b) => a + b, 0), birthdaySteps);
       const birthdayNumber = birthdayCalc.result;
 
       // Attitude Number (day + month)
@@ -416,7 +414,7 @@ export default function Index() {
           relationships: language === 'en' ? "Needs deep, meaningful connections with understanding partners" :
                         language === 'vi' ? "Cần những kết nối sâu sắc, ý nghĩa với đối tác hiểu biết" :
                         language === 'it' ? "Ha bisogno di connessioni profonde e significative con partner comprensivi" :
-                        "理解のあるパートナーとの深く意味のあるつながりが必要",
+                        "理解のあるパートナーとの深く意味��あるつながりが必要",
           growth: language === 'en' ? "Balance solitude with meaningful social connections" :
                  language === 'vi' ? "Cân bằng sự cô đơn với các kết nối xã hội có ý nghĩa" :
                  language === 'it' ? "Bilanciare la solitudine con connessioni sociali significative" :
@@ -571,7 +569,7 @@ export default function Index() {
                       </div>
 
                       <div>
-                        <h4 className="text-lg font-semibold text-purple-100 mb-3">💫 {t.keyStrengths}</h4>
+                        <h4 className="text-lg font-semibold text-purple-100 mb-3">���� {t.keyStrengths}</h4>
                         <div className="grid md:grid-cols-2 gap-4">
                           {meaning.strengths.map((strength: string, index: number) => (
                             <div key={index} className="flex items-center gap-2">
