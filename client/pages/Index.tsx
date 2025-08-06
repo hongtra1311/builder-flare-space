@@ -536,7 +536,7 @@ export default function Index() {
                     "Potrebbero dover fare attenzione all'arroganza o all'impazienza",
                   ]
                 : [
-                    "独立心とパイオニア精神を持つ生まれながらのリーダー",
+                    "独立心と��イオニア精神を持つ生まれながらのリーダー",
                     "主導権を握ることで成長し、指示されることを嫌う",
                     "革新性と独創性が彼らの強み",
                     "人生で自分だけの道を切り開く必要がある",
@@ -586,7 +586,7 @@ export default function Index() {
                     "L'intelligenza emotiva è un dono naturale",
                   ]
                 : [
-                    "人間関係を大切にする穏やかで平和を愛する人々",
+                    "人間���係を大切にする穏やかで平和を愛する人々",
                     "他者のニーズに敏感で、調和を作り出すのが得意",
                     "単独行動よりもパートナーシップを好み、外交が得意",
                     "他者に合わせる中で自分のアイデンティティを失わないよう注意が必要",
@@ -1037,7 +1037,7 @@ export default function Index() {
                   ]
                 : [
                     "精神的ビジョンと実践的行動を組み合わせるマスターナンバー",
-                    "持続するもの — 運動、コミュニティ、遺産を構築する能力がある",
+                    "持続するもの — 運動、コミ���ニティ、遺産を構築する能力がある",
                     "直感と規律の���方を持ち、変化のための強力な力となる",
                     "自分の可能性を信じ、平凡に甘んじないことが課題",
                     "大規模に夢を現実に変えるために生まれた",
@@ -1635,12 +1635,12 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-red-900 to-pink-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-purple-800 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-500"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-700 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-500"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
